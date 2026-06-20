@@ -335,7 +335,7 @@ export default function RandevuPage() {
                 <div className="space-y-6">
                   <div className="bg-gray-50 rounded-lg p-6 space-y-4">
                     <h3 className="font-semibold text-gray-900">Randevu Özeti</h3>
-                    <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                       <div>
                         <span className="text-gray-500">Hayvan:</span>
                         <p className="font-medium">{formData.petName} ({petTypes.find(p => p.id === formData.petType)?.name})</p>
