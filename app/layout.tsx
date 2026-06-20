@@ -16,10 +16,48 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = 'https://veteriner-klinigi.vercel.app';
+
 export const metadata: Metadata = {
-  title: "VetKlinik - Veteriner Kliniği | 7/24 Acil Servis",
-  description: "Evcil dostlarınız için profesyonel veteriner hizmetleri. Köpek, kedi, kuş ve egzotik hayvanlar için 7/24 acil servis, aşılama, cerrahi ve daha fazlası.",
-  keywords: "veteriner, istanbul, acil veteriner, köpek aşılama, kedi kısırlaştırma, egzotik hayvan veterineri",
+  title: {
+    default: 'VetKlinik — Veteriner Kliniği | 7/24 Acil Servis',
+    template: '%s | VetKlinik',
+  },
+  description:
+    'Evcil dostlarınız için profesyonel veteriner hizmetleri. Köpek, kedi, kuş ve egzotik hayvanlar için 7/24 acil servis, aşılama, cerrahi ve daha fazlası.',
+  keywords: [
+    'veteriner', 'acil veteriner', 'köpek aşılama', 'kedi kısırlaştırma',
+    'egzotik hayvan veterineri', 'veteriner kliniği', '7/24 veteriner',
+  ],
+  metadataBase: new URL(SITE_URL),
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    locale: 'tr_TR',
+    url: SITE_URL,
+    siteName: 'VetKlinik',
+    title: 'VetKlinik — Veteriner Kliniği | 7/24 Acil Servis',
+    description:
+      'Evcil dostlarınız için profesyonel veteriner hizmetleri. 7/24 acil servis, aşılama, cerrahi ve daha fazlası.',
+    images: [
+      {
+        url: '/og',
+        width: 1200,
+        height: 630,
+        alt: 'VetKlinik — Veteriner Kliniği Demo Sitesi',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'VetKlinik — Veteriner Kliniği | 7/24 Acil Servis',
+    description: 'Evcil dostlarınız için profesyonel veteriner hizmetleri.',
+    images: ['/og'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
