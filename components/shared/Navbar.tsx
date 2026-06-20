@@ -48,8 +48,13 @@ export default function Navbar() {
             </Button>
           </Link>
           <Link href="/randevu">
-            <Button size="sm">Randevu Al</Button>
+            <Button variant="outline" size="sm">Randevu Al</Button>
           </Link>
+          <a href="https://website-agency.lemonsqueezy.com/checkout/buy/1e5a595a-707c-4ae8-a297-82740070fdba" target="_blank" rel="noreferrer">
+            <Button size="sm" className="bg-orange-500 hover:bg-orange-600 text-white">
+              Bu Siteyi Satın Al
+            </Button>
+          </a>
         </div>
 
         {/* Mobile Navigation */}
@@ -88,8 +93,13 @@ export default function Navbar() {
                   </Button>
                 </Link>
                 <Link href="/randevu" onClick={() => setIsOpen(false)}>
-                  <Button className="w-full">Randevu Al</Button>
+                  <Button variant="outline" className="w-full">Randevu Al</Button>
                 </Link>
+                <a href="https://website-agency.lemonsqueezy.com/checkout/buy/1e5a595a-707c-4ae8-a297-82740070fdba" target="_blank" rel="noreferrer" onClick={() => setIsOpen(false)}>
+                  <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">
+                    Bu Siteyi Satın Al
+                  </Button>
+                </a>
               </div>
             </div>
           </SheetContent>

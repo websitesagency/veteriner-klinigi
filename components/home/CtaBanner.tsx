@@ -43,7 +43,7 @@ export default function CtaBanner() {
               Uzman veteriner kadromuz ve modern kliniğimizle her zaman yanınızdayız.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link href="/randevu">
                 <Button size="lg" className="bg-white text-primary hover:bg-green-50 shadow-xl shadow-black/20 text-lg px-8 py-6 h-auto">
                   <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -60,6 +60,19 @@ export default function CtaBanner() {
                   Bize Ulaşın
                 </Button>
               </Link>
+            </div>
+
+            {/* Demo satın alma CTA */}
+            <div className="inline-flex items-center gap-4 bg-white/10 backdrop-blur border border-white/20 rounded-2xl px-6 py-4 mb-10">
+              <div className="text-left">
+                <p className="text-sm font-semibold text-white">Bu siteyi kendi kliniğiniz için isteyin</p>
+                <p className="text-xs text-green-200 mt-0.5">Veteriner klinikleri için hazır web sitesi çözümü</p>
+              </div>
+              <a href="https://website-agency.lemonsqueezy.com/checkout/buy/1e5a595a-707c-4ae8-a297-82740070fdba" target="_blank" rel="noreferrer">
+                <Button className="bg-orange-500 hover:bg-orange-400 text-white shrink-0 px-5">
+                  Satın Al →
+                </Button>
+              </a>
             </div>
 
             {/* Trust Badges */}

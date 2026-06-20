@@ -47,6 +47,19 @@ export default function HeroSection() {
               </Link>
             </div>
 
+            {/* Demo sitesi satın alma CTA */}
+            <div className="flex items-center gap-4 p-4 bg-orange-50 border border-orange-200 rounded-xl">
+              <div className="flex-1">
+                <p className="text-sm font-semibold text-orange-900">Bu siteyi kendi kliniğiniz için isteyin</p>
+                <p className="text-xs text-orange-700 mt-0.5">Kurulum + aylık bakım paketi ile hemen başlayın</p>
+              </div>
+              <a href="https://website-agency.lemonsqueezy.com/checkout/buy/1e5a595a-707c-4ae8-a297-82740070fdba" target="_blank" rel="noreferrer">
+                <Button size="sm" className="bg-orange-500 hover:bg-orange-600 text-white shrink-0">
+                  Satın Al →
+                </Button>
+              </a>
+            </div>
+
             <div className="flex items-center gap-8 pt-4">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">15+</div>
