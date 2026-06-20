@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
@@ -9,14 +9,16 @@ import EmergencyButton from "@/components/shared/EmergencyButton";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 const SITE_URL = 'https://veteriner-klinigi.vercel.app';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#2E7D32',
+};
 
 export const metadata: Metadata = {
   title: {
@@ -39,14 +41,7 @@ export const metadata: Metadata = {
     title: 'VetKlinik — Veteriner Kliniği | 7/24 Acil Servis',
     description:
       'Evcil dostlarınız için profesyonel veteriner hizmetleri. 7/24 acil servis, aşılama, cerrahi ve daha fazlası.',
-    images: [
-      {
-        url: '/og',
-        width: 1200,
-        height: 630,
-        alt: 'VetKlinik — Veteriner Kliniği Demo Sitesi',
-      },
-    ],
+    images: [{ url: '/og', width: 1200, height: 630, alt: 'VetKlinik — Demo Sitesi' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -54,10 +49,7 @@ export const metadata: Metadata = {
     description: 'Evcil dostlarınız için profesyonel veteriner hizmetleri.',
     images: ['/og'],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -66,10 +58,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="tr"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    <html lang="tr" className={`${geistSans.variable} h-full antialiased`}>
+      <head>
+        <link rel="preconnect" href="https://ftyfwtotahygatrfejju.supabase.co" />
+      </head>
       <body className="min-h-full flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>
